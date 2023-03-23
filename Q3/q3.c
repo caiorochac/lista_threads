@@ -16,7 +16,6 @@ struct arg {
 void *grey_scale(void *arguments) {
     struct arg myArg = *((struct arg *) arguments);
     int res = myArg.p.R * 0.3 + myArg.p.G * 0.59 + myArg.p.B * 0.11;
-    printf("%d\n", res);
 
     (*myArg.res).R = res;
     (*myArg.res).G = res;
