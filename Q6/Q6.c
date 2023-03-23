@@ -3,9 +3,9 @@
 #include <stdbool.h>
 #include <pthread.h>
 
-#define thread_users 10 //threads usuário
-#define thread_desp 10  //threads despachantes
-#define tamBuffer 10    //tamanho do vetor buffer e de resultados
+#define thread_users 3 //threads usuário
+#define thread_desp 3  //threads despachantes
+#define tamBuffer 3    //tamanho do vetor buffer e de resultados
 
 typedef struct{     //vetor buffer
   int ID_thread, ID_operacao, var1, var2;
