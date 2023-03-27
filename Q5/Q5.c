@@ -5,9 +5,9 @@
 #include <time.h>
 #include <semaphore.h>
 
-#define buffer_size 20
-#define itens 10
-#define qtd_threads 3
+#define buffer_size 10
+#define itens 20
+#define qtd_threads 5
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t empty = PTHREAD_COND_INITIALIZER;
