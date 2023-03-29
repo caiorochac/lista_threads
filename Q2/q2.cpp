@@ -84,15 +84,15 @@ int main(int argc, char *argv[]){
 		grafo.adj[v1].push_back(v2); // determinando a orientação das arestas ja que eh um grafo direcionado
 	}
 
-	for(int i = 0; i < grafo.V; i++){
-		rc = pthread_create(&threads[i], NULL, dfs, (void*) i);  // cria as threads     
+	for(int i = 0; i < nVertices; i++){
+		rc = pthread_create(&threads[i], NULL, dfs, (void*) ids[i]);  // cria as threads     
 		if (rc){         
 			printf("ERRO; codigo de retorno eh %d\n", rc);    //  erro ao criar thread  
 			exit(-1);      
 		}
 	}
 
-	for (int i = 0; i < grafo.V; i++)
+	for (int i = 0; i < nVertices; i++)
 		pthread_join(threads[i], NULL);
 	
 	pthread_exit(NULL);
