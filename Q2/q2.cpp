@@ -85,6 +85,8 @@ int main(int argc, char *argv[]){
 	}
 
 	for(int i = 0; i < nVertices; i++){
+		ids[i] = new int;
+		*ids[i] = i;
 		rc = pthread_create(&threads[i], NULL, dfs, (void*) ids[i]);  // cria as threads     
 		if (rc){         
 			printf("ERRO; codigo de retorno eh %d\n", rc);    //  erro ao criar thread  
