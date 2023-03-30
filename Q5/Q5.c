@@ -1,9 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
 #include <pthread.h>
-#include <time.h>
-#include <semaphore.h>
+
 
 #define buffer_size 10
 #define itens 20
